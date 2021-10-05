@@ -1,0 +1,9 @@
+﻿  Test project O:/1A/FirstOrganizedCMake/build
+      Start 1: test_hello
+  1/2 Test #1: test_hello .......................   Passed    0.04 sec
+      Start 2: test_version
+  2/2 Test #2: test_version .....................   Passed    0.04 sec
+  
+  100% tests passed, 0 tests failed out of 2
+  
+  Total Test time (real) =   0.16 sec

@@ -22,9 +22,25 @@ if(FIRSTORGANIZEDCMAKE_WITH_EXECUTABLES)
 endif()
 
 #about tests
-if(FIRSTORGANIZEDCMAKE_WITH_TESTS)
+#if(FIRSTORGANIZEDCMAKE_WITH_TESTS)
     # Enable testing with CTest
-    enable_testing()
-    message(STATUS "Configuring FirstCMake with tests")
-    add_subdirectory(tests)
+ #   enable_testing()
+  #  message(STATUS "Configuring FirstCMake with tests")
+   # add_subdirectory(tests)
+#endif()
+
+include(CMakePackageConfigHelpers) # define the following command
+configure_package_config_file(
+	cmake/FirstOrganizedCMakeConfig.cmake.in
+	FirstOrganizedCMakeConfig.cmake
+	INSTALL_DESTINATION ${PROJECT_BINARY_DIR}
+)
+
+# Configure CPack
+if(WIN32)
+set(CPACK_GENERATOR "ZIP")
+else()
+set(CPACK_GENERATOR "TGZ")
 endif()
+# This must always be last!
+include(CPack)
