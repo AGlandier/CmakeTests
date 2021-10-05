@@ -1,2 +1,0 @@
-O:\1A\FirstOrganizedCMake\build\src\log_lib\Debug\loglib.pdb
-O:\1A\FirstOrganizedCMake\build\src\log_lib\loglib.dir\Debug\loglib.pdb
