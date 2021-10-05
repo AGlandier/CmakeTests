@@ -22,12 +22,12 @@ if(FIRSTORGANIZEDCMAKE_WITH_EXECUTABLES)
 endif()
 
 #about tests
-#if(FIRSTORGANIZEDCMAKE_WITH_TESTS)
+if(FIRSTORGANIZEDCMAKE_WITH_TESTS)
     # Enable testing with CTest
- #   enable_testing()
-  #  message(STATUS "Configuring FirstCMake with tests")
-   # add_subdirectory(tests)
-#endif()
+    enable_testing()
+    message(STATUS "Configuring FirstCMake with tests")
+    add_subdirectory(tests)
+endif()
 
 include(CMakePackageConfigHelpers) # define the following command
 configure_package_config_file(
